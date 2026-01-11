@@ -1,9 +1,3 @@
-// Initialize EmailJS with your public key
-(function() {
-    // You'll need to replace these with your own EmailJS credentials
-    emailjs.init("YOUR_PUBLIC_KEY_HERE"); // Get from EmailJS dashboard
-})();
-
 // DOM Elements
 const contactForm = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
@@ -60,72 +54,37 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
     submitBtn.disabled = true;
     
-    // Form data
-    const formData = {
-        from_name: document.getElementById('name').value,
-        from_email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        service: document.getElementById('service').value,
-        message: document.getElementById('message').value,
-        newsletter: document.getElementById('newsletter').checked ? 'Yes' : 'No',
-        date: new Date().toLocaleString(),
-        to_email: 'your-business-email@gmail.com' // Your business email
-    };
+    // Get form data
+    const formData = new FormData(contactForm);
     
     try {
-        // Send email using EmailJS
-        // Replace with your actual Service ID and Template ID from EmailJS
-        const response = await emailjs.send(
-            'YOUR_SERVICE_ID_HERE',      // Service ID from EmailJS
-            'YOUR_TEMPLATE_ID_HERE',     // Template ID from EmailJS
-            formData
-        );
+        // Send to Formspree
+        const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
         
-        // Success
-        showSuccessMessage();
-        
-        // Send auto-reply to customer
-        await sendAutoReply(formData);
-        
-        // Reset form
-        contactForm.reset();
+        if (response.ok) {
+            // Success
+            showSuccessMessage();
+            contactForm.reset();
+        } else {
+            throw new Error('Form submission failed');
+        }
         
     } catch (error) {
         // Error handling
-        console.error('Email sending failed:', error);
+        console.error('Submission failed:', error);
         showFormMessage('Oops! Something went wrong. Please try again.', 'error');
     } finally {
         // Reset button state
-        submitBtn.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+        submitBtn.innerHTML = '<span>Send Request</span><i class="fas fa-paper-plane"></i>';
         submitBtn.disabled = false;
     }
 });
-
-// Function to send auto-reply to customer
-async function sendAutoReply(customerData) {
-    try {
-        const autoReplyData = {
-            to_email: customerData.from_email,
-            to_name: customerData.from_name,
-            from_name: 'TechSolutions Team',
-            subject: 'Thank you for contacting TechSolutions!',
-            message: `Hi ${customerData.from_name}, we've received your inquiry about ${customerData.service || 'our services'} and will get back to you within 24 hours.`
-        };
-        
-        // Send auto-reply using a different template
-        await emailjs.send(
-            'YOUR_SERVICE_ID_HERE',          // Same Service ID
-            'YOUR_AUTO_REPLY_TEMPLATE_ID',   // Auto-reply Template ID
-            autoReplyData
-        );
-        
-        console.log('Auto-reply sent successfully');
-        
-    } catch (error) {
-        console.error('Auto-reply failed:', error);
-        // Don't show error to user - auto-reply failure shouldn't affect main submission
-    }
-}
 
 // Show success message and modal
 function showSuccessMessage() {
@@ -171,8 +130,8 @@ function showFormMessage(message, type) {
 }
 
 // Form validation on blur
-document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(input => {
-    input.addEventListener('blur', function() {
+document.querySelectorAll('#contactForm input, #contactForm textarea, #contactForm select').forEach(field => {
+    field.addEventListener('blur', function() {
         validateField(this);
     });
 });
@@ -183,14 +142,14 @@ function validateField(field) {
     const fieldName = field.name;
     
     // Clear previous error
-    field.style.borderColor = '#e9ecef';
+    field.style.borderColor = '#e0e0e0';
     
     if (field.required && !value) {
         showFieldError(field, 'This field is required');
         return false;
     }
     
-    if (fieldName === 'from_email' && value) {
+    if (fieldName === 'email' && value) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(value)) {
             showFieldError(field, 'Please enter a valid email address');
@@ -224,18 +183,22 @@ function animateStats() {
     const stats = document.querySelectorAll('.stat h3');
     
     stats.forEach(stat => {
-        const target = parseInt(stat.textContent);
-        const suffix = stat.textContent.replace(target, '');
-        let current = 0;
-        const increment = target / 100;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
-            }
-            stat.textContent = Math.floor(current) + suffix;
-        }, 20);
+        const text = stat.textContent;
+        const match = text.match(/(\d+)/);
+        if (match) {
+            const target = parseInt(match[1]);
+            const suffix = text.replace(target, '');
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                stat.textContent = Math.floor(current) + suffix;
+            }, 30);
+        }
     });
 }
 
@@ -260,9 +223,27 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.service-card, .testimonial-card, .stat').forEach(el => {
+document.querySelectorAll('.service-card, .project-card, .testimonial-card, .stat, .about-item').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(el);
+});
+
+// Green theme initialization
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('arConSe - Eco-friendly Construction Website Loaded');
+    
+    // Add leaf animation to logo
+    const logoCircle = document.querySelector('.logo-circle');
+    if (logoCircle) {
+        logoCircle.addEventListener('mouseenter', () => {
+            logoCircle.style.transform = 'rotate(360deg)';
+            logoCircle.style.transition = 'transform 0.8s ease';
+        });
+        
+        logoCircle.addEventListener('mouseleave', () => {
+            logoCircle.style.transform = 'rotate(0deg)';
+        });
+    }
 });
