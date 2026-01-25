@@ -13,7 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #FFA500; /* Orange background */
+    background-color: #f48020; /* Updated to #f48020 orange */
 }
 
 .container {
@@ -51,13 +51,13 @@ body {
 
 /* Navigation */
 .navbar {
-    background: #FFA500; /* Orange background */
+    background: #f48020; /* Updated to #f48020 */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #FF8C00; /* Darker orange border */
+    border-bottom: 2px solid #d86c10; /* Darker shade of #f48020 */
 }
 
 .nav-container {
@@ -102,12 +102,12 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #FFD700; /* Gold/yellow on hover */
+    color: #ffd700; /* Gold/yellow on hover */
 }
 
 .btn-quote {
     background: #FFF; /* White button */
-    color: #FFA500 !important; /* Orange text */
+    color: #f48020 !important; /* Orange text */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600 !important;
@@ -115,8 +115,8 @@ body {
 }
 
 .btn-quote:hover {
-    background: #FFD700; /* Gold/yellow on hover */
-    color: #FFA500 !important;
+    background: #ffd700; /* Gold/yellow on hover */
+    color: #f48020 !important;
 }
 
 .menu-toggle {
@@ -136,7 +136,7 @@ body {
     position: relative;
 }
 
-/* Services Section */
+/* Services Section - Clean Layout */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -145,37 +145,33 @@ body {
 
 .service-card {
     background: #FFF; /* White cards */
+    padding: 40px 30px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border: 1px solid #FF8C00; /* Orange border */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #d86c10; /* Darker shade of #f48020 */
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+    text-align: left;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.service-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .service-card h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin: 20px 0 10px;
-    color: #FF8C00; /* Orange headings */
-    padding: 0 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #d86c10; /* Darker orange headings */
+    text-align: center;
 }
 
 .service-card p {
-    padding: 0 20px 20px;
     color: #666;
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.05rem;
 }
 
 /* Projects Section */
@@ -190,7 +186,7 @@ body {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border: 1px solid #FF8C00;
+    border: 1px solid #d86c10;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -214,10 +210,10 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 10px;
-    color: #FF8C00; /* Orange headings */
+    color: #d86c10; /* Darker orange headings */
 }
 
-/* Products Section */
+/* Products Section - Clean Layout */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -226,58 +222,38 @@ body {
 
 .product-card {
     background: #FFF; /* White cards */
+    padding: 40px 30px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border: 1px solid #FF8C00;
-    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-left: 5px solid #d86c10; /* Darker shade of #f48020 */
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
 }
 
 .product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-}
-
-.product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 .product-card h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.5rem;
-    margin: 20px 0 10px;
-    color: #FF8C00; /* Orange headings */
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #d86c10; /* Darker orange headings */
+    text-align: center;
 }
 
 .product-card p {
-    padding: 0 20px;
     color: #666;
-    margin-bottom: 20px;
-}
-
-.btn-product {
-    display: inline-block;
-    background: #FF8C00; /* Orange button */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 20px;
-    transition: background 0.3s;
-}
-
-.btn-product:hover {
-    background: #FFA500; /* Lighter orange on hover */
+    line-height: 1.8;
+    text-align: center;
+    font-size: 1.05rem;
 }
 
 /* Quote Section */
 .quote {
-    background: #FFA500; /* Orange background */
+    background: #f48020; /* Updated to #f48020 */
     color: #FFF; /* White text */
 }
 
@@ -320,7 +296,7 @@ body {
 input, textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #FF8C00;
+    border: 1px solid #d86c10;
     border-radius: 5px;
     background: white;
     font-family: 'Roboto', sans-serif;
@@ -330,8 +306,8 @@ input, textarea {
 
 input:focus, textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #FF8C00;
-    border-color: #FF8C00;
+    box-shadow: 0 0 0 2px #d86c10;
+    border-color: #d86c10;
 }
 
 textarea {
@@ -339,7 +315,7 @@ textarea {
 }
 
 .btn-submit {
-    background: #FF8C00; /* Orange button */
+    background: #d86c10; /* Darker orange button */
     color: white;
     border: none;
     padding: 15px 40px;
@@ -352,7 +328,7 @@ textarea {
 }
 
 .btn-submit:hover {
-    background: #FFA500; /* Lighter orange */
+    background: #f48020; /* Lighter orange */
 }
 
 /* Footer - White background */
@@ -360,7 +336,7 @@ textarea {
     background: #FFF; /* White background for footer */
     color: #333;
     padding: 60px 0 20px;
-    border-top: 3px solid #FFA500; /* Orange top border */
+    border-top: 3px solid #f48020; /* Updated to #f48020 top border */
 }
 
 .footer-grid {
@@ -374,7 +350,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #FF8C00; /* Orange headings in footer */
+    color: #d86c10; /* Darker orange headings in footer */
 }
 
 .footer-col ul {
@@ -392,7 +368,7 @@ textarea {
 }
 
 .footer-col ul li a:hover {
-    color: #FF8C00; /* Orange on hover */
+    color: #d86c10; /* Orange on hover */
 }
 
 .contact-info li {
@@ -402,12 +378,12 @@ textarea {
 }
 
 .contact-info i {
-    color: #FF8C00; /* Orange icons */
+    color: #d86c10; /* Orange icons */
     margin-top: 5px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #FFA500;
+    border-top: 1px solid #f48020;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -428,20 +404,18 @@ textarea {
 }
 
 .footer-links a:hover {
-    color: #FF8C00; /* Orange on hover */
-}
-
-/* Remove placeholder styles */
-.project-image-placeholder,
-.product-image-placeholder,
-.service-icon {
-    display: none;
+    color: #d86c10; /* Orange on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
     .section-header h2 {
         font-size: 2rem;
+    }
+    
+    .service-card h3,
+    .product-card h3 {
+        font-size: 1.6rem;
     }
 }
 
@@ -452,11 +426,11 @@ textarea {
         top: 100%;
         left: 0;
         right: 0;
-        background: #FFA500; /* Orange background */
+        background: #f48020; /* Updated to #f48020 */
         flex-direction: column;
         padding: 20px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        border-top: 2px solid #FF8C00;
+        border-top: 2px solid #d86c10;
     }
     
     .nav-menu.active {
@@ -467,13 +441,9 @@ textarea {
         display: block;
     }
     
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
+    .service-card,
+    .product-card {
+        padding: 30px 20px;
     }
     
     .footer-bottom {
@@ -490,5 +460,15 @@ textarea {
     
     .quote-form {
         padding: 20px;
+    }
+    
+    .service-card h3,
+    .product-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .service-card p,
+    .product-card p {
+        font-size: 1rem;
     }
 }
