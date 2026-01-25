@@ -3,380 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>arConSe - Eco-friendly Construction Services</title>
+    <title>ArConSe - We Build. We Design. We Sell.</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <div class="logo-circle">
-                    <span class="logo-ar">ar</span>
-                    <span class="logo-con">Con</span>
-                    <span class="logo-se">Se</span>
-                </div>
-                <span class="logo-text">Eco-Construction</span>
+                <img src="arconse-logo.jpg" alt="ArConSe Logo">
+                <span>ArConSe</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#contact" class="btn-nav">Get Quote</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
+            <div class="nav-menu">
+                <a href="#services">Services</a>
+                <a href="#projects">Projects</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+                <a href="#quote" class="btn-quote">Request Quote</a>
+            </div>
+            <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span><i class="fas fa-leaf"></i> Sustainable Builders Since 2023</span>
-                </div>
-                <h1><span class="hero-ar">ar</span><span class="hero-con">Con</span><span class="hero-se">Se</span></h1>
-                <h2>Your Eco-friendly Construction Solution</h2>
-                <p>We specialize in sustainable construction using eco-friendly materials and green building practices. Transform your space while protecting our planet.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn-primary">
-                        <i class="fas fa-calendar-check"></i> Book Free Consultation
-                    </a>
-                    <a href="#projects" class="btn-secondary">
-                        <i class="fas fa-images"></i> View Our Projects
-                    </a>
-                </div>
-                <div class="hero-features">
-                    <div class="feature">
-                        <i class="fas fa-recycle"></i>
-                        <span>Eco Materials</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-solar-panel"></i>
-                        <span>Energy Efficient</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-award"></i>
-                        <span>Certified Green</span>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-clock"></i>
-                        <span>On-Time Delivery</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-frame">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Eco-friendly Construction">
-                    <div class="image-overlay">
-                        <div class="stat-card">
-                            <h3>150+</h3>
-                            <p>Green Projects</p>
-                        </div>
-                        <div class="stat-card">
-                            <h3>98%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>We Build. We Design. We Sell.</h1>
+            <p>Innovative construction, sustainable solutions, and premium products for a better future.</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Our Services</a>
+                <a href="#quote" class="btn-secondary">Get Quote</a>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section id="services" class="section services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Our <span>Construction Services</span></h2>
-                <p class="section-subtitle">Sustainable solutions for residential and commercial projects</p>
+                <h2>OUR SERVICES</h2>
+                <div class="underline"></div>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon green">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>Green Home Building</h3>
-                    <p>Eco-friendly residential construction using sustainable materials and energy-efficient designs.</p>
-                    <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon blue">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Commercial Eco-Renovation</h3>
-                    <p>Transform existing commercial spaces with sustainable materials and green technology.</p>
-                    <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon orange">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3>Water Conservation Systems</h3>
-                    <p>Install rainwater harvesting, greywater recycling, and efficient plumbing solutions.</p>
-                    <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon teal">
+                    <div class="service-icon">
                         <i class="fas fa-sun"></i>
                     </div>
-                    <h3>Solar Integration</h3>
-                    <p>Professional installation of solar panels and renewable energy systems for homes and businesses.</p>
-                    <a href="#contact" class="service-link">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    <h3>Solar Power</h3>
+                    <p>Complete solar panel installation and renewable energy systems for sustainable power generation.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud-rain"></i>
+                    </div>
+                    <h3>Rainwater Harvesting</h3>
+                    <p>Efficient rainwater collection and storage systems to reduce water consumption and costs.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Water Treatment</h3>
+                    <p>Advanced water treatment and recycling solutions for clean, sustainable water management.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Automated Organic Composter</h3>
+                    <p>Smart composting systems that convert organic waste into nutrient-rich fertilizer automatically.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Showcase -->
-    <section class="projects" id="projects">
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured <span>Green Projects</span></h2>
-                <p class="section-subtitle">See our sustainable construction work in action</p>
+                <h2>OUR PROJECTS</h2>
+                <div class="underline"></div>
+                <p>Explore our latest construction and sustainability projects</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Eco Home">
-                    </div>
-                    <div class="project-content">
-                        <h3>Modern Eco Home</h3>
-                        <p>Complete sustainable home construction using recycled materials and solar power.</p>
-                        <div class="project-tags">
-                            <span class="tag">Residential</span>
-                            <span class="tag">Solar</span>
-                            <span class="tag">LEED Certified</span>
-                        </div>
+                    <img src="project-1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Modern Residential Complex</h3>
+                        <p>Sustainable housing with integrated solar and water systems</p>
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Green Office">
+                    <img src="project-2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Commercial Solar Farm</h3>
+                        <p>5MW solar power plant for industrial use</p>
                     </div>
-                    <div class="project-content">
-                        <h3>Green Office Renovation</h3>
-                        <p>Commercial space transformation with energy-efficient systems and biophilic design.</p>
-                        <div class="project-tags">
-                            <span class="tag">Commercial</span>
-                            <span class="tag">Renovation</span>
-                            <span class="tag">Energy Star</span>
-                        </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-3.jpg" alt="Project 3">
+                    <div class="project-info">
+                        <h3>Water Treatment Facility</h3>
+                        <p>Community water purification and recycling plant</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-4.jpg" alt="Project 4">
+                    <div class="project-info">
+                        <h3>Urban Rainwater System</h3>
+                        <p>City-wide rainwater harvesting implementation</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <h2 class="section-title">Why Choose <span>arConSe?</span></h2>
-                <p class="lead">We combine traditional craftsmanship with modern sustainable practices to deliver exceptional results that respect both your vision and our planet.</p>
-                
-                <div class="about-grid">
-                    <div class="about-item">
-                        <i class="fas fa-leaf"></i>
-                        <h3>Sustainable Materials</h3>
-                        <p>We source eco-friendly, recycled, and locally-produced materials for every project.</p>
-                    </div>
-                    <div class="about-item">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Energy Efficiency</h3>
-                        <p>Our designs reduce energy consumption by up to 60% compared to traditional construction.</p>
-                    </div>
-                    <div class="about-item">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Certified Experts</h3>
-                        <p>Our team holds LEED, BREEAM, and Green Building certifications.</p>
-                    </div>
-                    <div class="about-item">
-                        <i class="fas fa-calendar-check"></i>
-                        <h3>Timely Delivery</h3>
-                        <p>We complete 95% of our projects ahead of schedule without compromising quality.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="stat">
-                    <h3>5+</h3>
-                    <p>Years Experience</p>
-                </div>
-                <div class="stat">
-                    <h3>150+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat">
-                    <h3>45+</h3>
-                    <p>Happy Clients</p>
-                </div>
-                <div class="stat">
-                    <h3>500+</h3>
-                    <p>Tons CO₂ Reduced</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
+    <!-- Products Section -->
+    <section id="products" class="section products">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Client <span>Testimonials</span></h2>
-                <p class="section-subtitle">What our clients say about our sustainable construction work</p>
+                <h2>OUR PRODUCTS</h2>
+                <div class="underline"></div>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"arConSe transformed our old office into a modern, energy-efficient workspace. Our energy bills dropped by 40%!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
-                        <div>
-                            <h4>Michael Rodriguez</h4>
-                            <p>Business Owner, EcoTech Solutions</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="Home Battery Backup.jpg" alt="Home Battery Backup">
+                    <h3>Home Battery Backup</h3>
+                    <p>Reliable energy storage solutions to keep your home powered during outages.</p>
+                    <a href="#quote" class="btn-product">Inquire Now</a>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Their attention to detail and commitment to sustainability is impressive. Our green home is exactly what we dreamed of."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
-                        <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>Homeowner, Green Living Advocate</p>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
+                <div class="product-card">
+                    <img src="Power Station.jpg" alt="Power Station">
+                    <h3>Power Station</h3>
+                    <p>Portable power stations for on-the-go energy needs and emergency backup.</p>
+                    <a href="#quote" class="btn-product">Inquire Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="Premium Series.jpg" alt="Premium Series">
+                    <h3>Premium Series</h3>
+                    <p>Our top-tier product line featuring advanced technology and superior performance.</p>
+                    <a href="#quote" class="btn-product">Inquire Now</a>
+                </div>
+                <div class="product-card">
+                    <img src="product-solar-panel.jpg" alt="Solar Panel">
+                    <h3>Solar Panel</h3>
+                    <p>High-efficiency solar panels designed for maximum energy generation.</p>
+                    <a href="#quote" class="btn-product">Inquire Now</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact" id="contact">
+    <!-- Quote Section -->
+    <section id="quote" class="section quote">
         <div class="container">
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Get Your <span>Free Quote</span></h2>
-                    <p class="lead">Ready to build sustainably? Contact us for a free consultation and project estimate.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact@arconse.com</p>
-                            </div>
+            <div class="quote-container">
+                <div class="quote-content">
+                    <h2>Request a Quote</h2>
+                    <p>Tell us about your project and we'll get back to you within 24 hours.</p>
+                    
+                    <form id="quoteForm" class="quote-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Serving all major cities in the region</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Business Hours</h4>
-                                <p>Mon-Fri: 8AM-6PM<br>Sat: 9AM-2PM</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-container">
-                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                        <h3>Request Free Consultation</h3>
-                        
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <input type="email" id="email" placeholder="Email Address" required>
                             </div>
-                            
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="tel" id="phone" placeholder="Phone Number">
                             </div>
                         </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="project-type">Project Type *</label>
-                                <select id="project-type" name="project_type" required>
-                                    <option value="">Select project type</option>
-                                    <option value="residential">Residential Construction</option>
-                                    <option value="commercial">Commercial Renovation</option>
-                                    <option value="solar">Solar Installation</option>
-                                    <option value="consultation">Green Consultation</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        
                         <div class="form-group">
-                            <label for="budget">Estimated Budget</label>
-                            <select id="budget" name="budget">
-                                <option value="">Select budget range</option>
-                                <option value="under-50k">Under $50,000</option>
-                                <option value="50k-100k">$50,000 - $100,000</option>
-                                <option value="100k-250k">$100,000 - $250,000</option>
-                                <option value="250k-plus">$250,000+</option>
-                            </select>
+                            <textarea id="message" placeholder="Tell us about your project..." rows="4" required></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Project Details *</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your construction project..." required></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="newsletter" name="newsletter">
-                            <label for="newsletter">Subscribe to our green building tips newsletter</label>
-                        </div>
-                        
-                        <button type="submit" class="btn-primary" id="submitBtn">
-                            <span>Send Request</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                        
-                        <div id="formMessage"></div>
+                        <button type="submit" class="btn-submit">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -386,74 +193,60 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+            <div class="footer-grid">
+                <div class="footer-col">
                     <div class="logo">
-                        <div class="logo-circle">
-                            <span class="logo-ar">ar</span>
-                            <span class="logo-con">Con</span>
-                            <span class="logo-se">Se</span>
-                        </div>
-                        <span class="logo-text">Eco-Construction</span>
+                        <img src="arconse-logo.jpg" alt="ArConSe Logo">
+                        <span>ArConSe</span>
                     </div>
-                    <p>Building a sustainable future, one project at a time. Certified green construction services for residential and commercial projects.</p>
+                    <p>We Build. We Design. We Sell. Innovative solutions for a sustainable future.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Get Quote</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Our Services</h4>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Green Home Building</a></li>
-                        <li><a href="#">Commercial Renovation</a></li>
-                        <li><a href="#">Solar Integration</a></li>
-                        <li><a href="#">Water Systems</a></li>
-                        <li><a href="#">Sustainable Consulting</a></li>
+                        <li><a href="#services">Solar Power</a></li>
+                        <li><a href="#services">Rainwater Harvesting</a></li>
+                        <li><a href="#services">Water Treatment</a></li>
+                        <li><a href="#services">Automated Organic Composter</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Connect With Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-linkedin"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-pinterest"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                    <div class="footer-certifications">
-                        <span class="cert-badge"><i class="fas fa-certificate"></i> LEED Certified</span>
-                        <span class="cert-badge"><i class="fas fa-certificate"></i> Green Building</span>
-                    </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Philippines, 4885</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>arconse.ic@gmail.com</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2023 arConSe Eco-friendly Construction. All rights reserved.</p>
-                <p class="footer-disclaimer">We are committed to sustainable building practices and environmental stewardship.</p>
+                <p>&copy; 2025 ArConSe. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Modal for Success Message -->
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Thank You! <i class="fas fa-check-circle"></i></h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Your consultation request has been sent successfully! We'll contact you within 24 hours to discuss your project.</p>
-                <p>Check your email for a confirmation message.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-primary" id="modalClose">Close</button>
-            </div>
-        </div>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
