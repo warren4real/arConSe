@@ -13,7 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff8f0; /* Light orange background */
+    background-color: #fff8f0; /* Light orange background for entire page */
 }
 
 .container {
@@ -25,6 +25,7 @@ body {
 
 .section {
     padding: 80px 0;
+    background-color: #fff8f0; /* ensure sections inherit the light orange background */
 }
 
 .section-header {
@@ -124,14 +125,14 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(255, 165, 0, 0.1), rgba(255, 140, 0, 0.2)), 
-                linear-gradient(135deg, #ffcc99 0%, #ff9966 100%); /* Orange gradient */
-    color: #d35400; /* Dark orange text */
-    display: flex;
-    align-items: center;
-    text-align: center;
+    margin-top: 80px; /* keep space for fixed navbar */
+    background-color: #fff8f0; /* fallback */
+    background-image: url('images/hero.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
     position: relative;
-    margin-top: 80px;
 }
 
 .hero-content {
@@ -220,7 +221,7 @@ body {
 
 /* Services Section */
 .services {
-    background: #fff8f0; /* Light orange background */
+    background: transparent; /* inherit page background */
 }
 
 .services-grid {
@@ -259,7 +260,7 @@ body {
 
 /* Projects Section */
 .projects {
-    background: #fff0e0; /* Slightly darker light orange */
+    background: transparent; /* inherit page background */
 }
 
 .projects-grid {
@@ -301,7 +302,7 @@ body {
 
 /* Products Section */
 .products {
-    background: #fff8f0; /* Light orange background */
+    background: transparent; /* inherit page background */
 }
 
 .products-grid {
@@ -350,26 +351,10 @@ body {
     margin-bottom: 20px;
 }
 
-.btn-product {
-    display: inline-block;
-    background: #e67e22; /* Medium orange */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 20px;
-    transition: background 0.3s;
-}
-
-.btn-product:hover {
-    background: #d35400; /* Dark orange */
-}
-
 /* Quote Section */
 .quote {
-    background: linear-gradient(135deg, #ff9966 0%, #ff6600 100%); /* Orange gradient */
-    color: white;
+    background: transparent; /* inherit page background */
+    color: #d35400; /* use dark orange text against light bg */
 }
 
 .quote-container {
@@ -389,11 +374,11 @@ body {
 }
 
 .quote-form {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .form-group {
@@ -445,8 +430,8 @@ textarea {
 
 /* Footer */
 .footer {
-    background: #d35400; /* Dark orange */
-    color: white;
+    background: #ffffff; /* white footer bar as requested */
+    color: #333; /* dark text for contrast */
     padding: 60px 0 20px;
 }
 
@@ -461,7 +446,7 @@ textarea {
     font-family: 'Poppins', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 20px;
-    color: #ffcc99; /* Light orange */
+    color: #d35400; /* dark orange headings in footer */
 }
 
 .footer-col ul {
@@ -473,13 +458,13 @@ textarea {
 }
 
 .footer-col ul li a {
-    color: #ffcc99; /* Light orange */
+    color: #d35400; /* dark orange links */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-    color: white;
+    color: #e67e22; /* slightly lighter on hover */
 }
 
 .contact-info li {
@@ -489,17 +474,19 @@ textarea {
 }
 
 .contact-info i {
-    color: #ffcc99; /* Light orange */
+    color: #e67e22; /* Medium orange */
     margin-top: 5px;
 }
 
 .footer-bottom {
-    border-top: 1px solid #e67e22;
+    border-top: 1px solid #ffcc99;
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background: #ffffff; /* keep consistent white */
+    color: #333;
 }
 
 .footer-links {
@@ -508,13 +495,13 @@ textarea {
 }
 
 .footer-links a {
-    color: #ffcc99; /* Light orange */
+    color: #d35400; /* dark orange */
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: white;
+    color: #e67e22;
 }
 
 /* Responsive Design */
