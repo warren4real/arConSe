@@ -36,9 +36,9 @@ if (quoteForm) {
         // Determine which phone number to show based on inquiry type
         let contactNumber = '';
         if (inquiryType === 'service' || inquiryType === 'project') {
-            contactNumber = '0916-693-8001 (Norman Tan)';
+            contactNumber = '0916-693-8001';
         } else if (inquiryType === 'product') {
-            contactNumber = '0917-204-3104 (Joash Gaerlan)';
+            contactNumber = '0917-204-3104';
         } else {
             contactNumber = '0916-693-8001 or 0917-204-3104';
         }
@@ -87,3 +87,25 @@ document.querySelectorAll('.product-card').forEach(card => {
         this.style.cursor = 'pointer';
     });
 });
+
+// Projects Dropdown Toggle
+const projectsDropdownToggle = document.getElementById('projectsDropdownToggle');
+const projectsDropdown = document.getElementById('projectsDropdown');
+const dropdownIcon = document.querySelector('.dropdown-icon');
+
+if (projectsDropdownToggle) {
+    projectsDropdownToggle.addEventListener('click', () => {
+        projectsDropdown.classList.toggle('show');
+        dropdownIcon.classList.toggle('open');
+        
+        // Update ARIA attributes for accessibility
+        const isExpanded = projectsDropdown.classList.contains('show');
+        projectsDropdownToggle.setAttribute('aria-expanded', isExpanded);
+        projectsDropdown.setAttribute('aria-hidden', !isExpanded);
+    });
+    
+    // Set initial ARIA attributes
+    projectsDropdownToggle.setAttribute('aria-expanded', 'false');
+    projectsDropdown.setAttribute('aria-hidden', 'true');
+    projectsDropdownToggle.setAttribute('aria-controls', 'projectsDropdown');
+}
