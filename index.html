@@ -1,3 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArConSe - We Build. We Design. We Sell.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="arconse-logo (inverted).jpg" alt="ArConSe Logo">
+                <span class="logo-text">rConSe</span>
+            </a>
+            <div class="nav-menu">
+                <a href="#services">Services</a>
+                <a href="#products">Products</a>
+                <a href="#projects">Projects</a>
+                <a href="#quote" class="btn-quote">Contact</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" role="img" aria-label="ArConSe hero image"></section>
+
+    <!-- Services Section - T-FORMAT (Two Columns) -->
+    <section id="services" class="section services">
+        <div class="container">
+            <div class="section-header">
+                <h2>OUR SERVICES</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Professional solutions for residential, commercial, and industrial applications</p>
+            </div>
+            
+            <div class="services-t-format">
+                <div class="services-column">
+                    <div class="services-column-header">
+                        <h3>Core Design & Development</h3>
+                    </div>
+                    <div class="service-item">
+                        <h4>Architectural Design and Engineering</h4>
+                        <p>Complete architectural design services, engineering consultations, and project management for all types of construction projects.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Design Services</h4>
+                        <p>Creative and innovative design solutions tailored to client needs and project requirements.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Construction and Development</h4>
+                        <p>End-to-end construction services including ground-up development, renovations, and sustainable building practices.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Real Estate Sales and Development</h4>
+                        <p>Property development, sales, and marketing services with focus on sustainable and innovative residential and commercial projects.</p>
+                    </div>
+                </div>
+                
+                <div class="services-column">
+                    <div class="services-column-header">
+                        <h3>Renewable Energy & Water Management</h3>
+                    </div>
+                    <div class="service-item">
+                        <h4>Water Proofing Application</h4>
+                        <p>Professional waterproofing services using high-performance membranes, sealants, and coatings for all types of structures.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Solar Panel, Battery, Converter Installation</h4>
+                        <p>Complete solar panel systems installation, battery backup solutions, converters, and solar energy systems for sustainable power.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Solar Street Light Installation</h4>
+                        <p>Installation of energy-efficient solar street lighting systems with monocrystalline panels and lithium batteries.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Water Treatment Systems Installation</h4>
+                        <p>Installation of water purification systems and wastewater treatment plants (20-160 CMD capacity).</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Rain Water Harvesting Installation</h4>
+                        <p>Professional rainwater harvesting solutions to conserve water resources and promote sustainability.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="services-cta">
+                <a href="#quote" class="btn-cta">Request a Quotation</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Products Section - 3 CATEGORIES -->
     <section id="products" class="section products">
         <div class="container">
@@ -100,3 +198,208 @@
             </div>
         </div>
     </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>RECENT PROJECTS</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Completed and ongoing construction and sustainability projects</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="project-1.jpg" alt="Heritage Lifestyle Medical Center">
+                    <div class="project-info">
+                        <h3>Heritage Lifestyle Medical Center</h3>
+                        <p>Ongoing project - Design and construction of modern medical facility with sustainable features.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-2.jpg" alt="Beulah Cafe">
+                    <div class="project-info">
+                        <h3>Beulah Cafe</h3>
+                        <p>Design and construct completed June 2025 - Sustainable cafe with solar power and water recycling.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-3.jpg" alt="AIIAS Staff House">
+                    <div class="project-info">
+                        <h3>AIIAS Staff House</h3>
+                        <p>Ongoing project - Residential complex with integrated solar and water management systems.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="project-4.jpg" alt="AIAS Gym Building">
+                    <div class="project-info">
+                        <h3>AIAS Gym Building</h3>
+                        <p>Construction completed 2024 - Sports facility with energy-efficient lighting and water systems.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Notable Projects - DROPDOWN VERSION -->
+            <div class="project-highlights-dropdown">
+                <button class="dropdown-toggle" id="projectsDropdownToggle">
+                    <h4>Other Notable Projects:</h4>
+                    <i class="fas fa-chevron-down dropdown-icon"></i>
+                </button>
+                <div class="dropdown-content" id="projectsDropdown">
+                    <ul>
+                        <li>Potable Water Systems at Belmont Newport Luxury Hotels</li>
+                        <li>21 Stages Fully Executive Purified Water Refilling System (3000 GPD)</li>
+                        <li>NOVADECI - 160 CMD Sewage Treatment Plant</li>
+                        <li>St. Mazenod Hospital - 20 CMD Sewage Treatment Plant</li>
+                        <li>Gourmet Solutions - 25 CMD Sewage Treatment Plant</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="quote" class="section quote">
+        <div class="container">
+            <div class="section-header">
+                <h2>CONTACT US</h2>
+                <div class="underline"></div>
+                <p class="section-subtitle">Get in touch for quotations, product inquiries, or project consultations</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Office Address</h4>
+                                <p>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite, Philippines 4885</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>arconse.ic@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Numbers</h4>
+                                <p>0916-693-8001</p>
+                                <p>0917-204-3104</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="quoteForm" class="quote-form">
+                        <div class="form-group">
+                            <label for="inquiry-type">Inquiry Type</label>
+                            <select id="inquiry-type" required>
+                                <option value="">Select inquiry type</option>
+                                <option value="service">Service Quotation</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="project">Project Consultation</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Full Name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Tell us about your requirements..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <img src="arconse-logo (inverted).jpg" alt="ArConSe Logo">
+                        <span class="logo-text">rConSe</span>
+                    </div>
+                    <p>We Build. We Design. We Sell. Innovative solutions for a sustainable future.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:arconse.ic@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#quote">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#services">Architectural Design</a></li>
+                        <li><a href="#services">Construction</a></li>
+                        <li><a href="#services">Solar Installation</a></li>
+                        <li><a href="#services">Water Treatment</a></li>
+                        <li><a href="#services">Waterproofing</a></li>
+                        <li><a href="#services">Real Estate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite 4885</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>arconse.ic@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0916-693-8001<br>0917-204-3104</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 ArConSe. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
