@@ -69,71 +69,125 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px;
 }
 
 /* Logo Image Styling */
 .logo-img {
-    height: 40px; /* Adjust based on your image size */
-    width: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
+    height: 40px;
+    width: auto;
+    display: block;
 }
 
-/* Remove or update the old logo-text styles */
-.logo-text {
-    display: none; /* Hide the text logo */
-}
-
-/* Optional: Adjust logo container padding if needed */
-.logo {
+/* Navigation Menu Layout */
+.nav-menu {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    padding: 5px 0; /* Adjust padding for image */
+    gap: 20px;
 }
 
-/* For the footer logo - make it smaller */
-.footer .logo-img {
-    height: 35px; /* Slightly smaller for footer */
-}
-
-.nav-menu {
+/* Group the first three links together */
+.nav-links {
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
+/* Navigation Links - Orange Text */
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: #f48020; /* Orange color */
     font-weight: 500;
+    font-size: 1rem;
     transition: color 0.3s;
+    padding: 5px 0;
+    position: relative;
 }
 
-.nav-menu a:hover {
-    color: #f48020;
-}
-
+/* Contact Button - Orange Background with White Text */
 .btn-quote {
     background: #f48020;
     color: white !important;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 5px;
     font-weight: 600 !important;
     transition: all 0.3s;
+    border: 2px solid #f48020;
+    margin-left: 10px;
 }
 
 .btn-quote:hover {
-    background: #d86c10;
+    background: #fff;
+    color: #f48020 !important;
 }
 
+/* Add underline effect on hover for regular links */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f48020;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Menu Toggle */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #333;
+    color: #f48020;
     cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        border-top: 2px solid #f48020;
+        gap: 15px;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .btn-quote {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
 }
 
 .hero {
