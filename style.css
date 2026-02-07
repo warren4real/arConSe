@@ -49,45 +49,48 @@ body {
     border-radius: 2px;
 }
 
-/* Navigation */
+/* Updated Navigation */
 .navbar {
-    background: #f48020; /* Updated to #f48020 */
+    background: #FFF; /* Changed to white background */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 2px solid #d86c10; /* Darker shade of #f48020 */
+    border-bottom: 2px solid #f48020; /* Orange border at bottom */
 }
 
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 15px 20px; /* Reduced padding slightly */
 }
 
+/* Updated Logo Container */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #FFF; /* White logo text */
+    background: #f48020; /* Orange background for logo container */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: -5px; /* Adjust positioning */
 }
 
 .logo img {
-    height: 40px;
+    height: 35px;
     margin-right: 10px;
 }
 
 .logo-text {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #FFF; /* White logo text */
+    color: #FFF; /* White text for logo */
 }
 
+/* Updated Navigation Menu */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -96,27 +99,48 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #FFF; /* White navigation text */
+    color: #333; /* Dark text for navigation links on white background */
     font-weight: 500;
     transition: color 0.3s;
+    padding: 8px 0;
+    position: relative;
 }
 
 .nav-menu a:hover {
-    color: #ffd700; /* Gold/yellow on hover */
+    color: #f48020; /* Orange on hover */
 }
 
+/* Add underline effect on hover */
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f48020;
+    transition: width 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* Updated Contact Button */
 .btn-quote {
-    background: #FFF; /* White button */
-    color: #f48020 !important; /* Orange text */
+    background: #f48020; /* Orange background */
+    color: #FFF !important; /* White text */
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600 !important;
     transition: all 0.3s;
+    border: 2px solid #f48020;
 }
 
 .btn-quote:hover {
-    background: #ffd700; /* Gold/yellow on hover */
-    color: #f48020 !important;
+    background: #FFF; /* White background on hover */
+    color: #f48020 !important; /* Orange text on hover */
+    border-color: #f48020;
 }
 
 .menu-toggle {
@@ -124,7 +148,7 @@ body {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #FFF;
+    color: #333; /* Dark color for menu icon */
     cursor: pointer;
 }
 
@@ -747,11 +771,11 @@ textarea {
         top: 100%;
         left: 0;
         right: 0;
-        background: #f48020; /* Updated to #f48020 */
+        background: #FFF; /* White background for mobile menu */
         flex-direction: column;
         padding: 20px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        border-top: 2px solid #d86c10;
+        border-top: 2px solid #f48020;
     }
     
     .nav-menu.active {
@@ -760,6 +784,16 @@ textarea {
     
     .menu-toggle {
         display: block;
+    }
+    
+    .nav-menu a {
+        color: #333; /* Dark text for mobile menu */
+        padding: 12px 0;
+        text-align: center;
+    }
+    
+    .nav-menu a:hover {
+        color: #f48020;
     }
     
     .services-t-format {
