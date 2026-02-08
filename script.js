@@ -11,18 +11,6 @@ if (menuToggle) {
     });
 }
 
-// Projects dropdown functionality
-const dropdownToggle = document.getElementById('projectsDropdownToggle');
-const dropdownContent = document.getElementById('projectsDropdown');
-const dropdownIcon = dropdownToggle?.querySelector('.dropdown-icon');
-
-if (dropdownToggle) {
-    dropdownToggle.addEventListener('click', () => {
-        dropdownContent.classList.toggle('show');
-        dropdownIcon.classList.toggle('open');
-    });
-}
-
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
 navLinks.forEach(link => {
@@ -32,6 +20,62 @@ navLinks.forEach(link => {
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
         }
     });
+});
+
+// Product Modal Functionality
+const productCards = document.querySelectorAll('.product-card');
+const modals = document.querySelectorAll('.product-modal');
+const closeButtons = document.querySelectorAll('.close-modal');
+
+// Open modal when clicking on product card
+productCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Don't open modal if clicking on the "Contact for Quote" or "Inquire Now" button
+        if (e.target.closest('.btn-product')) {
+            return;
+        }
+        
+        const modalId = card.getAttribute('data-modal') + '-modal';
+        const modal = document.getElementById(modalId);
+        
+        if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+        }
+    });
+});
+
+// Close modal when clicking close button
+closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.product-modal');
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+});
+
+// Close modal when clicking outside of modal content
+window.addEventListener('click', (e) => {
+    modals.forEach(modal => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+    });
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        modals.forEach(modal => {
+            if (modal.style.display === 'block') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+        });
+    }
 });
 
 // Contact form submission
@@ -66,6 +110,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
+            // Close any open modals before scrolling
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
@@ -75,13 +125,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Add hover effect to product cards
-const productCards = document.querySelectorAll('.product-card');
 productCards.forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px)';
+        if (!card.classList.contains('clicked')) {
+            card.style.transform = 'translateY(-10px)';
+        }
     });
     
     card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0)';
+        if (!card.classList.contains('clicked')) {
+            card.style.transform = 'translateY(0)';
+        }
     });
 });
