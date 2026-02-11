@@ -557,7 +557,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-height: 90vh; /* Constrain dialog height */
+    max-height: 90vh;
 }
 
 .lightbox-header {
@@ -567,7 +567,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-shrink: 0; /* Don't shrink header */
+    flex-shrink: 0;
 }
 
 .lightbox-header h2 {
@@ -650,7 +650,50 @@ body {
     box-shadow: 0 6px 15px rgba(216, 108, 16, 0.3);
 }
 
-/* Contact Section */
+/* Contact Section - Now on Orange Background */
+.orange-contact-wrapper {
+    background-color: #f48020;
+    width: 100%;
+}
+
+.orange-contact-wrapper .section-header h2,
+.orange-contact-wrapper .section-subtitle {
+    color: white;
+}
+
+.orange-contact-wrapper .underline {
+    background: white;
+}
+
+.orange-contact-wrapper .contact-section {
+    padding: 80px 0;
+}
+
+.orange-contact-wrapper .contact-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+}
+
+.orange-contact-wrapper .contact-info h3,
+.orange-contact-wrapper .contact-form h3 {
+    color: #333;
+}
+
+.orange-contact-wrapper .contact-item h4 {
+    color: #333;
+}
+
+.orange-contact-wrapper .contact-item p {
+    color: #666;
+}
+
+.orange-contact-wrapper .contact-item i {
+    color: #f48020;
+}
+
+/* Contact Container Styles (reused) */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -695,6 +738,11 @@ body {
 .contact-item p {
     color: #666;
     line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.contact-item p:last-child {
+    margin-bottom: 0;
 }
 
 .quote-form {
@@ -744,6 +792,16 @@ input:focus, textarea:focus, select:focus {
 
 .btn-submit:hover {
     background: #f48020;
+}
+
+/* White Background Footer Only */
+.white-background.footer-only {
+    background-color: white;
+}
+
+.white-background.footer-only .footer {
+    background-color: white;
+    border-top: 1px solid #eee;
 }
 
 /* Footer */
@@ -804,6 +862,29 @@ input:focus, textarea:focus, select:focus {
     padding-top: 20px;
     text-align: center;
     color: #666;
+}
+
+/* Update white-background to not affect contact section */
+.white-background:not(.footer-only) {
+    background-color: white;
+}
+
+/* Ensure the orange background wrapper ends at projects */
+.orange-background {
+    background-color: #f48020;
+}
+
+/* Update section headers for orange background */
+.orange-background .section-header h2,
+.orange-background .section-subtitle,
+.orange-contact-wrapper .section-header h2,
+.orange-contact-wrapper .section-subtitle {
+    color: white;
+}
+
+.orange-background .underline,
+.orange-contact-wrapper .underline {
+    background: white;
 }
 
 /* Responsive Design */
@@ -934,6 +1015,10 @@ input:focus, textarea:focus, select:focus {
         padding: 12px 25px;
         font-size: 1rem;
     }
+    
+    .orange-contact-wrapper .contact-container {
+        padding: 30px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1001,8 +1086,13 @@ input:focus, textarea:focus, select:focus {
         font-size: 1.1rem;
     }
     
-    .contact-container {
+    .contact-container,
+    .orange-contact-wrapper .contact-container {
         padding: 20px;
+    }
+    
+    .orange-contact-wrapper .contact-section {
+        padding: 60px 0;
     }
     
     .lightbox-content {
