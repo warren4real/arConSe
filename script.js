@@ -22,46 +22,43 @@ navLinks.forEach(link => {
     });
 });
 
-// Product Modal Functionality
-const productCards = document.querySelectorAll('.product-card');
-const modals = document.querySelectorAll('.product-modal');
-const closeButtons = document.querySelectorAll('.close-modal');
+// Global functions for opening and closing modals
+window.openModal = function(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+};
 
-// Open modal when clicking on product card
-productCards.forEach(card => {
-    card.addEventListener('click', (e) => {
-        // Don't open modal if clicking on the "Contact for Quote" or "Inquire Now" button
-        if (e.target.closest('.btn-product')) {
-            return;
-        }
-        
-        const modalId = card.getAttribute('data-modal') + '-modal';
-        const modal = document.getElementById(modalId);
-        
-        if (modal) {
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
-        }
-    });
-});
+window.closeModal = function(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+};
 
 // Close modal when clicking close button
+const closeButtons = document.querySelectorAll('.close-lightbox');
 closeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modal = button.closest('.product-modal');
+    button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const modal = button.closest('.lightbox-modal');
         if (modal) {
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto';
         }
     });
 });
 
 // Close modal when clicking outside of modal content
 window.addEventListener('click', (e) => {
+    const modals = document.querySelectorAll('.lightbox-modal');
     modals.forEach(modal => {
         if (e.target === modal) {
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto';
         }
     });
 });
@@ -69,10 +66,11 @@ window.addEventListener('click', (e) => {
 // Close modal with Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
+        const modals = document.querySelectorAll('.lightbox-modal');
         modals.forEach(modal => {
             if (modal.style.display === 'block') {
                 modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
+                document.body.style.overflow = 'auto';
             }
         });
     }
@@ -84,18 +82,14 @@ if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        // Get form values
         const inquiryType = document.getElementById('inquiry-type').value;
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
         
-        // In a real application, you would send this data to a server
-        // For now, we'll just show an alert
         alert(`Thank you for your inquiry, ${name}! We will contact you at ${email} or ${phone} regarding your ${inquiryType} request.`);
         
-        // Reset form
         quoteForm.reset();
     });
 }
@@ -111,30 +105,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             // Close any open modals before scrolling
+            const modals = document.querySelectorAll('.lightbox-modal');
             modals.forEach(modal => {
                 modal.style.display = 'none';
             });
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto';
             
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
-        }
-    });
-});
-
-// Add hover effect to product cards
-productCards.forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        if (!card.classList.contains('clicked')) {
-            card.style.transform = 'translateY(-10px)';
-        }
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        if (!card.classList.contains('clicked')) {
-            card.style.transform = 'translateY(0)';
         }
     });
 });
