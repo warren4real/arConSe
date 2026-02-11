@@ -117,7 +117,6 @@ if (quoteForm) {
             contextMessage = `Regarding: ${lightboxState.selectedTitle}\n\n${message}`;
         }
         
-        // Get selected inquiry type text for better message
         const selectElement = document.getElementById('inquiry-type');
         const inquiryTypeText = selectElement.options[selectElement.selectedIndex]?.text || inquiryType;
         
@@ -137,7 +136,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            // Close lightbox if open
             if (lightboxModal && lightboxModal.style.display === 'block') {
                 closeLightbox();
             }
