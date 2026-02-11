@@ -189,22 +189,19 @@
                 
                 <!-- Products Grid - 3 columns -->
                 <div class="products-grid-3cols">
-                    <!-- Water Proofing Product -->
-                    <div class="product-card">
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.png', 'Water Proofing', 'product')">
-                            <img src="assets/Water Proofing Product.png" alt="Water Proofing" class="product-image">
-                            <div class="product-image-overlay">
-                                <span class="overlay-text">Click me</span>
-                            </div>
+                    <!-- Water Proofing Product - IMAGE ONLY (no text, no button) -->
+                    <div class="product-card" style="background: none; box-shadow: none; border-left: none; padding: 0;">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.jpg', 'Water Proofing', 'product')" style="margin-bottom: 0;">
+                            <img src="assets/Water Proofing Product.jpg" alt="Water Proofing" class="product-image">
+                            <!-- Overlay "Click me" completely removed -->
                         </div>
-                        <h3>Water Proofing</h3>
-                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                        <!-- <h3> and <a> removed -->
                     </div>
                     
                     <!-- Water Dispenser Product -->
                     <div class="product-card">
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Dispenser Product.png', 'Water Dispenser', 'product')">
-                            <img src="assets/Water Dispenser Product.png" alt="Water Dispenser" class="product-image">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Dispenser Product.jpg', 'Water Dispenser', 'product')">
+                            <img src="assets/Water Dispenser Product.jpg" alt="Water Dispenser" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
@@ -481,27 +478,16 @@
         </footer>
     </div>
 
-    <!-- Single Lightbox Modal -->
+    <!-- ===== LIGHTBOX – IMAGE ONLY ===== -->
     <div id="lightbox-modal" class="lightbox-modal">
         <div class="lightbox-content">
-            <!-- Header with title -->
-            <div class="lightbox-header">
-                <h2 id="lightbox-title"></h2>
-                <span class="close-lightbox">&times;</span>
-            </div>
+            <!-- Floating close button – absolutely positioned -->
+            <span class="close-lightbox">&times;</span>
             
-            <!-- Scrollable content area -->
+            <!-- Scrollable image area -->
             <div class="lightbox-body-scrollable">
-                <!-- Image container -->
                 <div class="lightbox-image-container">
                     <img id="lightbox-image" src="" alt="" class="lightbox-detail-image">
-                </div>
-                
-                <!-- Action buttons (hidden via CSS) -->
-                <div class="lightbox-actions">
-                    <a href="#quote" id="lightbox-quote-btn" class="btn-lightbox-quote">
-                        <i class="fas fa-file-alt"></i> Request a Quotation
-                    </a>
                 </div>
             </div>
         </div>
