@@ -189,16 +189,13 @@
                 
                 <!-- Products Grid - 3 columns -->
                 <div class="products-grid-3cols">
-                    <!-- Water Proofing Product -->
-                    <div class="product-card">
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.jpg', 'Water Proofing', 'product')">
+                    <!-- Water Proofing Product - IMAGE ONLY (no text, no button) -->
+                    <div class="product-card" style="background: none; box-shadow: none; border-left: none; padding: 0;">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.jpg', 'Water Proofing', 'product')" style="margin-bottom: 0;">
                             <img src="assets/Water Proofing Product.jpg" alt="Water Proofing" class="product-image">
-                            <div class="product-image-overlay">
-                                <span class="overlay-text">Click me</span>
-                            </div>
+                            <!-- Overlay "Click me" completely removed -->
                         </div>
-                        <h3>Water Proofing</h3>
-                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                        <!-- <h3> and <a> removed -->
                     </div>
                     
                     <!-- Water Dispenser Product -->
