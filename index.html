@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArConSe - We Build. We Design. We Sell.</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArConSe - We Build. We Design. We Sell.</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -15,6 +22,7 @@
             <a href="#" class="logo">
                 <img src="assets/arconse-logo (inverted).jpg" alt="ArConSe Logo" class="logo-img">
             </a>
+
             <div class="nav-menu">
                 <div class="nav-links-centered">
                     <a href="#services">Services</a>
@@ -23,6 +31,7 @@
                 </div>
                 <a href="#quote" class="btn-contact-oval">Contact</a>
             </div>
+
             <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -34,11 +43,13 @@
         <!-- Hero Section -->
         <section class="hero">
             <div class="container">
-                <div class="hero-content"></div>
+                <div class="hero-content">
+                    <!-- Image only - no text -->
+                </div>
             </div>
         </section>
 
-        <!-- Services Section (unchanged, click removed) -->
+        <!-- Services Section -->
         <section id="services" class="section services">
             <div class="container">
                 <div class="section-header">
@@ -46,6 +57,8 @@
                     <div class="underline"></div>
                     <p class="section-subtitle">Professional solutions for residential, commercial, and industrial applications</p>
                 </div>
+                
+                <!-- Two Column Table Layout -->
                 <div class="services-grid-2cols">
                     <!-- Core Design & Development Column -->
                     <div class="service-column-card">
@@ -53,6 +66,7 @@
                             <h3>Core Design & Development</h3>
                         </div>
                         <div class="service-rows">
+                            <!-- Service rows – CLICK REMOVED, hover only -->
                             <div class="service-row">
                                 <div class="service-icon">
                                     <img src="assets/service-architecture.jpg" alt="Architectural Design and Engineering">
@@ -91,6 +105,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Renewable Energy & Water Management Column -->
                     <div class="service-column-card">
                         <div class="service-column-header">
@@ -160,6 +175,8 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Request a Quotation Button -->
                 <div class="services-quote-btn-container">
                     <a href="#quote" class="btn-quote-white">
                         <i class="fas fa-file-alt"></i> Request a Quotation
@@ -168,7 +185,7 @@
             </div>
         </section>
 
-        <!-- ===== PRODUCTS SECTION – UPDATED ===== -->
+        <!-- Products Section - 3 Columns -->
         <section id="products" class="section products">
             <div class="container">
                 <div class="section-header">
@@ -176,87 +193,73 @@
                     <div class="underline"></div>
                     <p class="section-subtitle">High-quality products for sustainable living and construction</p>
                 </div>
-
+                
+                <!-- Products Grid - 3 columns -->
                 <div class="products-grid-3cols">
-                    <!-- Water Proofing -->
+                    <!-- Water Proofing Product – CLICK KEPT -->
                     <div class="product-card">
-                        <div class="product-header">
-                            <i class="fas fa-tint product-icon"></i>
-                            <h3>Water Proofing</h3>
-                        </div>
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.jpg', 'Water Proofing')">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.jpg', 'Water Proofing', 'product')">
                             <img src="assets/Water Proofing Product.jpg" alt="Water Proofing" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
+                        <h3>Water Proofing</h3>
                         <a href="#quote" class="btn-product">Contact for Quote</a>
                     </div>
-
-                    <!-- Water Dispenser -->
+                    
+                    <!-- Water Dispenser Product – CLICK KEPT -->
                     <div class="product-card">
-                        <div class="product-header">
-                            <i class="fas fa-faucet product-icon"></i>
-                            <h3>Water Dispenser</h3>
-                        </div>
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Dispenser Product.jpg', 'Water Dispenser')">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Dispenser Product.jpg', 'Water Dispenser', 'product')">
                             <img src="assets/Water Dispenser Product.jpg" alt="Water Dispenser" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
+                        <h3>Water Dispenser</h3>
                         <a href="#quote" class="btn-product">Contact for Quote</a>
                     </div>
-
-                    <!-- Solar Products -->
+                    
+                    <!-- Solar Products – CLICK KEPT -->
                     <div class="product-card">
-                        <div class="product-header">
-                            <i class="fas fa-sun product-icon"></i>
-                            <h3>Solar Products</h3>
-                        </div>
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Solar Products.jpg', 'Solar Products')">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Solar Products.jpg', 'Solar Products', 'product')">
                             <img src="assets/Solar Products.jpg" alt="Solar Products" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
+                        <h3>Solar Products</h3>
                         <a href="#quote" class="btn-product">Inquire Now</a>
                     </div>
-
-                    <!-- Power Station -->
+                    
+                    <!-- Power Station – CLICK KEPT -->
                     <div class="product-card">
-                        <div class="product-header">
-                            <i class="fas fa-battery-full product-icon"></i>
-                            <h3>Power Station</h3>
-                        </div>
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/product-power station.jpg', 'Power Station')">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/product-power station.jpg', 'Power Station', 'product')">
                             <img src="assets/product-power station.jpg" alt="Power Station" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
+                        <h3>Power Station</h3>
                         <a href="#quote" class="btn-product">Inquire Now</a>
                     </div>
-
-                    <!-- Smart Organic Composter -->
+                    
+                    <!-- Smart Organic Composter – CLICK KEPT -->
                     <div class="product-card">
-                        <div class="product-header">
-                            <i class="fas fa-leaf product-icon"></i>
-                            <h3>Smart Organic Composter</h3>
-                        </div>
-                        <div class="product-image-wrapper" onclick="openLightbox('assets/Smart Organic Composter.jpg', 'Smart Organic Composter')">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Smart Organic Composter.jpg', 'Smart Organic Composter', 'product')">
                             <img src="assets/Smart Organic Composter.jpg" alt="Smart Organic Composter" class="product-image">
                             <div class="product-image-overlay">
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
+                        <h3>Smart Organic Composter</h3>
                         <a href="#quote" class="btn-product">Contact for Quote</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (unchanged) -->
+        <!-- Projects Section - 5 Containers -->
         <section id="projects" class="section projects">
             <div class="container">
                 <div class="section-header">
@@ -264,10 +267,12 @@
                     <div class="underline"></div>
                     <p class="section-subtitle">Completed and ongoing construction and sustainability projects</p>
                 </div>
+                
+                <!-- Projects Grid - 2 columns, 5 items – CLICK REMAINS (unchanged) -->
                 <div class="projects-grid-2cols projects-grid-5items">
-                    <!-- (all project cards – keep as is) -->
+                    <!-- Project 1 - St. Mazenod Hospital -->
                     <div class="project-card">
-                        <div class="project-image-wrapper" onclick="openLightbox('assets/St. Mazenod Hospital.JPG', 'St. Mazenod Hospital - 20 CMD Sewage Treatment Plant')">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/St. Mazenod Hospital.JPG', 'St. Mazenod Hospital - 20 CMD Sewage Treatment Plant', 'project')">
                             <img src="assets/St. Mazenod Hospital.JPG" alt="St. Mazenod Hospital" class="project-image">
                             <div class="project-image-overlay">
                                 <span class="overlay-text">Click to enlarge</span>
@@ -278,8 +283,10 @@
                             <p>Design and Build of 20 CMD Sewage Treatment Plant</p>
                         </div>
                     </div>
+                    
+                    <!-- Project 2 - NOVADECI -->
                     <div class="project-card">
-                        <div class="project-image-wrapper" onclick="openLightbox('assets/project-novadeci.jpg', 'NOVADECI - 160 CMD Sewage Treatment Plant')">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/project-novadeci.jpg', 'NOVADECI - 160 CMD Sewage Treatment Plant', 'project')">
                             <img src="assets/project-novadeci.jpg" alt="NOVADECI" class="project-image">
                             <div class="project-image-overlay">
                                 <span class="overlay-text">Click to enlarge</span>
@@ -290,8 +297,10 @@
                             <p>Design and Build of 160 CMD Sewage Treatment Plant</p>
                         </div>
                     </div>
+                    
+                    <!-- Project 3 - AIIAS Staff House -->
                     <div class="project-card">
-                        <div class="project-image-wrapper" onclick="openLightbox('assets/project-aiias.jpg', 'AIIAS Staff House - Residential Complex')">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/project-aiias.jpg', 'AIIAS Staff House - Residential Complex', 'project')">
                             <img src="assets/project-aiias.jpg" alt="AIIAS Staff House" class="project-image">
                             <div class="project-image-overlay">
                                 <span class="overlay-text">Click to enlarge</span>
@@ -302,8 +311,10 @@
                             <p>Ongoing project - Residential complex with integrated solar and water management systems</p>
                         </div>
                     </div>
+                    
+                    <!-- Project 4 - AIIAS Gym Building -->
                     <div class="project-card">
-                        <div class="project-image-wrapper" onclick="openLightbox('assets/AIIAS Gym Building.JPG', 'AIIAS Gym Building')">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/AIIAS Gym Building.JPG', 'AIIAS Gym Building', 'project')">
                             <img src="assets/AIIAS Gym Building.JPG" alt="AIIAS Gym Building" class="project-image">
                             <div class="project-image-overlay">
                                 <span class="overlay-text">Click to enlarge</span>
@@ -314,8 +325,10 @@
                             <p>Completed - Modern gymnasium facility with sustainable design elements</p>
                         </div>
                     </div>
+                    
+                    <!-- Project 5 - Southern Asia-Pacific Division Corporation -->
                     <div class="project-card">
-                        <div class="project-image-wrapper" onclick="openLightbox('assets/Southern Asia Pacific Division Corporation of General Conference of Seventhday Adventist Church.png', 'Southern Asia-Pacific Division Corporation')">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/Southern Asia Pacific Division Corporation of General Conference of Seventhday Adventist Church.png', 'Southern Asia-Pacific Division Corporation', 'project')">
                             <img src="assets/Southern Asia Pacific Division Corporation of General Conference of Seventhday Adventist Church.png" alt="Southern Asia-Pacific Division Corporation" class="project-image">
                             <div class="project-image-overlay">
                                 <span class="overlay-text">Click to enlarge</span>
@@ -333,6 +346,7 @@
 
     <!-- Orange Contact Section Wrapper -->
     <div class="orange-contact-wrapper">
+        <!-- Contact Section -->
         <section id="quote" class="section contact-section">
             <div class="container">
                 <div class="section-header">
@@ -340,11 +354,11 @@
                     <div class="underline"></div>
                     <p class="section-subtitle">Get in touch for quotations, product inquiries, or project consultations</p>
                 </div>
+                
                 <div class="contact-container">
                     <div class="contact-info">
                         <h3>Get In Touch</h3>
                         <div class="contact-details">
-                            <!-- contact items unchanged -->
                             <div class="contact-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <div>
@@ -379,6 +393,7 @@
                             </div>
                         </div>
                     </div>
+                    
                     <div class="contact-form">
                         <h3>Send Us a Message</h3>
                         <form id="quoteForm" class="quote-form">
@@ -412,8 +427,9 @@
         </section>
     </div>
 
-    <!-- White Background Footer -->
+    <!-- White Background Wrapper - ONLY for footer -->
     <div class="white-background footer-only">
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer-grid">
@@ -423,6 +439,7 @@
                         </div>
                         <p>We Build. We Design. We Sell. Innovative solutions for a sustainable future.</p>
                     </div>
+                    
                     <div class="footer-col">
                         <h3>Quick Links</h3>
                         <ul>
@@ -432,6 +449,7 @@
                             <li><a href="#quote">Contact</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-col">
                         <h3>Our Services</h3>
                         <ul>
@@ -443,15 +461,26 @@
                             <li><a href="#services">Real Estate</a></li>
                         </ul>
                     </div>
+                    
                     <div class="footer-col">
                         <h3>Contact Info</h3>
                         <ul class="contact-info">
-                            <li><i class="fas fa-map-marker-alt"></i><span>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite 4885</span></li>
-                            <li><i class="fas fa-envelope"></i><span>arconse.ic@gmail.com</span></li>
-                            <li><i class="fas fa-phone"></i><span>0916-693-8001<br>0917-204-3104</span></li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite 4885</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>arconse.ic@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>0916-693-8001<br>0917-204-3104</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
+                
                 <div class="footer-bottom">
                     <p>&copy; 2026 ArConSe. All rights reserved.</p>
                 </div>
@@ -459,13 +488,517 @@
         </footer>
     </div>
 
-    <!-- ===== LIGHTBOX MODAL – SCROLLABLE, IMAGE ONLY ===== -->
+    <!-- Single Lightbox Modal -->
     <div id="lightbox-modal" class="lightbox-modal">
         <div class="lightbox-content">
-            <span class="close-lightbox">&times;</span>
+            <!-- Header with title -->
+            <div class="lightbox-header">
+                <h2 id="lightbox-title"></h2>
+                <span class="close-lightbox">&times;</span>
+            </div>
+            
+            <!-- Scrollable content area -->
+            <div class="lightbox-body-scrollable">
+                <!-- Image container -->
+                <div class="lightbox-image-container">
+                    <img id="lightbox-image" src="" alt="" class="lightbox-detail-image">
+                </div>
+                
+                <!-- Action buttons (hidden via CSS) -->
+                <div class="lightbox-actions">
+                    <a href="#quote" id="lightbox-quote-btn" class="btn-lightbox-quote">
+                        <i class="fas fa-file-alt"></i> Request a Quotation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/arconse-logo (inverted).jpg" alt="ArConSe Logo" class="logo-img">
+            </a>
+            
+            <div class="nav-menu">
+                <div class="nav-links-centered">
+                    <a href="#services">Services</a>
+                    <a href="#products">Products</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <a href="#quote" class="btn-contact-oval">Contact</a>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Orange Background Wrapper -->
+    <div class="orange-background">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Image only - no text -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>OUR SERVICES</h2>
+                    <div class="underline"></div>
+                    <p class="section-subtitle">Professional solutions for residential, commercial, and industrial applications</p>
+                </div>
+
+                <!-- Two Column Table Layout -->
+                <div class="services-grid-2cols">
+                    <!-- Core Design & Development Column -->
+                    <div class="service-column-card">
+                        <div class="service-column-header">
+                            <h3>Core Design & Development</h3>
+                        </div>
+                        <div class="service-rows">
+                            <!-- Service rows – CLICK REMOVED, hover only -->
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-architecture.jpg" alt="Architectural Design and Engineering">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Architectural Design and Engineering</h4>
+                                    <p>Complete architectural design services, engineering consultations, and project management for all types of construction projects.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-construction.jpg" alt="Construction and Development">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Construction and Development</h4>
+                                    <p>End-to-end construction services including ground-up development, renovations, and sustainable building practices.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-realestate.jpg" alt="Real Estate Sales and Development">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Real Estate Sales and Development</h4>
+                                    <p>Property development, sales, and marketing services with focus on sustainable and innovative residential and commercial projects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Renewable Energy & Water Management Column -->
+                    <div class="service-column-card">
+                        <div class="service-column-header">
+                            <h3>Renewable Energy & Water Management</h3>
+                        </div>
+                        <div class="service-rows">
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-waterproofing.jpg" alt="Water Proofing Application">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Water Proofing Application</h4>
+                                    <p>Professional waterproofing services using high-performance membranes, sealants, and coatings for all types of structures.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-solarpanel.jpg" alt="Solar Panel, Battery, Converter Installation">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Solar Panel, Battery, Converter Installation</h4>
+                                    <p>Complete solar panel systems installation, battery backup solutions, converters, and solar energy systems for sustainable power.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-streetlight.jpg" alt="Solar Street Light Installation">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Solar Street Light Installation</h4>
+                                    <p>Installation of energy-efficient solar street lighting systems with monocrystalline panels and lithium batteries.</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-watertreatment.jpg" alt="Water Treatment Systems Installation">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Water Treatment Systems Installation</h4>
+                                    <p>Installation of water purification systems and wastewater treatment plants (20-160 CMD capacity).</p>
+                                </div>
+                            </div>
+                            <div class="service-row">
+                                <div class="service-icon">
+                                    <img src="assets/service-rainwater.jpg" alt="Rain Water Harvesting Installation">
+                                    <div class="service-icon-overlay">
+                                    </div>
+                                </div>
+                                <div class="service-details">
+                                    <h4>Rain Water Harvesting Installation</h4>
+                                    <p>Professional rainwater harvesting solutions to conserve water resources and promote sustainability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Request a Quotation Button -->
+                <div class="services-quote-btn-container">
+                    <a href="#quote" class="btn-quote-white">
+                        <i class="fas fa-file-alt"></i> Request a Quotation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section - 3 Columns -->
+        <section id="products" class="section products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>OUR PRODUCTS</h2>
+                    <div class="underline"></div>
+                    <p class="section-subtitle">High-quality products for sustainable living and construction</p>
+                </div>
+
+                <!-- Products Grid - 3 columns -->
+                <div class="products-grid-3cols">
+                    <!-- Water Proofing Product – CLICK KEPT -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Proofing Product.png', 'Water Proofing', 'product')">
+                            <img src="assets/Water Proofing Product.png" alt="Water Proofing" class="product-image">
+                            <div class="product-image-overlay">
+                                <span class="overlay-text">Click me</span>
+                            </div>
+                        </div>
+                        <h3>Water Proofing</h3>
+                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                    </div>
+
+                    <!-- Water Dispenser Product – CLICK KEPT -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Water Dispenser Product.png', 'Water Dispenser', 'product')">
+                            <img src="assets/Water Dispenser Product.png" alt="Water Dispenser" class="product-image">
+                            <div class="product-image-overlay">
+                                <span class="overlay-text">Click me</span>
+                            </div>
+                        </div>
+                        <h3>Water Dispenser</h3>
+                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                    </div>
+
+                    <!-- Solar Products – CLICK KEPT -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Solar Products.jpg', 'Solar Products', 'product')">
+                            <img src="assets/Solar Products.jpg" alt="Solar Products" class="product-image">
+                            <div class="product-image-overlay">
+                                <span class="overlay-text">Click me</span>
+                            </div>
+                        </div>
+                        <h3>Solar Products</h3>
+                        <a href="#quote" class="btn-product">Inquire Now</a>
+                    </div>
+
+                    <!-- Power Station – CLICK KEPT -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/product-powerstation.jpg', 'Power Station', 'product')">
+                            <img src="assets/product-powerstation.jpg" alt="Power Station" class="product-image">
+                            <div class="product-image-overlay">
+                                <span class="overlay-text">Click me</span>
+                            </div>
+                        </div>
+                        <h3>Power Station</h3>
+                        <a href="#quote" class="btn-product">Inquire Now</a>
+                    </div>
+
+                    <!-- Smart Organic Composter – CLICK KEPT -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper" onclick="openLightbox('assets/Smart Organic Composter.jpg', 'Smart Organic Composter', 'product')">
+                            <img src="assets/Smart Organic Composter.jpg" alt="Smart Organic Composter" class="product-image">
+                            <div class="product-image-overlay">
+                                <span class="overlay-text">Click me</span>
+                            </div>
+                        </div>
+                        <h3>Smart Organic Composter</h3>
+                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section - 5 Containers -->
+        <section id="projects" class="section projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>RECENT PROJECTS</h2>
+                    <div class="underline"></div>
+                    <p class="section-subtitle">Completed and ongoing construction and sustainability projects</p>
+                </div>
+
+                <!-- Projects Grid - 2 columns, 5 items – CLICK REMAINS (unchanged) -->
+                <div class="projects-grid-2cols projects-grid-5items">
+                    <!-- Project 1 - St. Mazenod Hospital -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/St. Mazenod Hospital.JPG', 'St. Mazenod Hospital - 20 CMD Sewage Treatment Plant', 'project')">
+                            <img src="assets/St. Mazenod Hospital.JPG" alt="St. Mazenod Hospital" class="project-image">
+                            <div class="project-image-overlay">
+                                <span class="overlay-text">Click to enlarge</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>St. Mazenod Hospital</h3>
+                            <p>Design and Build of 20 CMD Sewage Treatment Plant</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 - NOVADECI -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/NOVADECI.JPG', 'NOVADECI - 160 CMD Sewage Treatment Plant', 'project')">
+                            <img src="assets/NOVADECI.JPG" alt="NOVADECI" class="project-image">
+                            <div class="project-image-overlay">
+                                <span class="overlay-text">Click to enlarge</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>NOVADECI</h3>
+                            <p>Design and Build of 160 CMD Sewage Treatment Plant</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 - AIIAS Staff House -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/AIIAS STAFF HOUSE.png', 'AIIAS Staff House - Residential Complex', 'project')">
+                            <img src="assets/AIIAS STAFF HOUSE.png" alt="AIIAS Staff House" class="project-image">
+                            <div class="project-image-overlay">
+                                <span class="overlay-text">Click to enlarge</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AIIAS Staff House</h3>
+                            <p>Ongoing project - Residential complex with integrated solar and water management systems</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 - AIIAS Gym Building -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/AIIAS Gym Building.JPG', 'AIIAS Gym Building', 'project')">
+                            <img src="assets/AIIAS Gym Building.JPG" alt="AIIAS Gym Building" class="project-image">
+                            <div class="project-image-overlay">
+                                <span class="overlay-text">Click to enlarge</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AIIAS Gym Building</h3>
+                            <p>Completed - Modern gymnasium facility with sustainable design elements</p>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 - Southern Asia-Pacific Division Corporation -->
+                    <div class="project-card">
+                        <div class="project-image-wrapper" onclick="openLightbox('assets/Southern Asia Pacific Division Corporation of General Conference of Seventhday Adventist Church.png', 'Southern Asia-Pacific Division Corporation', 'project')">
+                            <img src="assets/Southern Asia Pacific Division Corporation of General Conference of Seventhday Adventist Church.png" alt="Southern Asia-Pacific Division Corporation" class="project-image">
+                            <div class="project-image-overlay">
+                                <span class="overlay-text">Click to enlarge</span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Southern Asia-Pacific Division Corporation</h3>
+                            <p>Construction - On Going: Started November 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Orange Contact Section Wrapper -->
+    <div class="orange-contact-wrapper">
+        <!-- Contact Section -->
+        <section id="quote" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>CONTACT US</h2>
+                    <div class="underline"></div>
+                    <p class="section-subtitle">Get in touch for quotations, product inquiries, or project consultations</p>
+                </div>
+
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get In Touch</h3>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Office Address</h4>
+                                    <p>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite, Philippines 4885</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email Address</h4>
+                                    <p>arconse.ic@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Phone Numbers</h4>
+                                    <p>0916-693-8001</p>
+                                    <p>0917-204-3104</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Business Hours</h4>
+                                    <p>Monday - Thursday: 8:00 AM - 5:00 PM</p>
+                                    <p>Friday: 8:00 AM - 3:00 PM</p>
+                                    <p>Saturday: Closed</p>
+                                    <p>Sunday: By Appointment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+                        <form id="quoteForm" class="quote-form">
+                            <div class="form-group">
+                                <label for="inquiry-type">Inquiry Type</label>
+                                <select id="inquiry-type" required>
+                                    <option value="">Select inquiry type</option>
+                                    <option value="service">Service Quotation</option>
+                                    <option value="product">Product Inquiry</option>
+                                    <option value="project">Project Consultation</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Tell us about your project..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- White Background Wrapper - ONLY for footer -->
+    <div class="white-background footer-only">
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <img src="assets/arconse-logo (inverted).jpg" alt="ArConSe Logo" class="logo-img">
+                        </div>
+                        <p>We Build. We Design. We Sell. Innovative solutions for a sustainable future.</p>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#quote">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="#services">Architectural Design</a></li>
+                            <li><a href="#services">Construction</a></li>
+                            <li><a href="#services">Solar Installation</a></li>
+                            <li><a href="#services">Water Treatment</a></li>
+                            <li><a href="#services">Waterproofing</a></li>
+                            <li><a href="#services">Real Estate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h3>Contact Info</h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite 4885</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>arconse.ic@gmail.com</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>0916-693-8001<br>0917-204-3104</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 ArConSe. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <div class="lightbox-content">
+            <div class="lightbox-header">
+                <h2 id="lightbox-title"></h2>
+                <span class="close-lightbox">&times;</span>
+            </div>
             <div class="lightbox-body-scrollable">
                 <div class="lightbox-image-container">
                     <img id="lightbox-image" src="" alt="" class="lightbox-detail-image">
+                </div>
+                <div class="lightbox-actions">
+                    <a href="#quote" id="lightbox-quote-btn" class="btn-lightbox-quote">
+                        <i class="fas fa-file-alt"></i> Request a Quotation
+                    </a>
                 </div>
             </div>
         </div>
