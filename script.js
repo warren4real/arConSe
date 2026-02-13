@@ -22,74 +22,38 @@ navLinks.forEach(link => {
     });
 });
 
-// State management for lightbox
-let lightboxState = {
-    selectedImage: null,
-    selectedTitle: "",
-    currentType: ""
-};
-
-// Get DOM elements
-const lightboxModal = document.getElementById('lightbox-modal');
-const lightboxImage = document.getElementById('lightbox-image');
-
-
-// Open lightbox function – title parameter is now optional and unused
-window.openLightbox = function(image, title, type) {
-    lightboxState.selectedImage = image;
-    lightboxState.selectedTitle = title || '';
-    lightboxState.currentType = type || 'general';
-
-    // Update image only – no title element exists anymore
+// ===== LIGHTBOX FUNCTIONS – Plain HTML/CSS =====
+function openLightbox(imageSrc, title) {
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    
     if (lightboxImage) {
-        lightboxImage.src = image;
+        lightboxImage.src = imageSrc;
         lightboxImage.alt = title || 'Enlarged image';
-
-
-
-
     }
-
-    // Show modal
-    if (lightboxModal) {
-        lightboxModal.style.display = 'block';
+    
+    if (lightboxOverlay) {
+        lightboxOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
-};
+}
 
-// Close lightbox function
-window.closeLightbox = function() {
-    lightboxState.selectedImage = null;
-    lightboxState.selectedTitle = "";
-    lightboxState.currentType = "";
-
-    // Hide modal
-    if (lightboxModal) {
-        lightboxModal.style.display = 'none';
+function closeLightbox() {
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    
+    if (lightboxOverlay) {
+        lightboxOverlay.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
-};
+}
 
-// Close modal when clicking close button
-const closeButtons = document.querySelectorAll('.close-lightbox');
-closeButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.stopPropagation();
-        closeLightbox();
-    });
-});
-
-// Close modal when clicking outside of modal content
-window.addEventListener('click', (e) => {
-    if (e.target === lightboxModal) {
-        closeLightbox();
-    }
-});
-
-// Close modal with Escape key
+// Close lightbox with Escape key
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && lightboxModal && lightboxModal.style.display === 'block') {
-        closeLightbox();
+    if (e.key === 'Escape') {
+        const lightboxOverlay = document.getElementById('lightbox-overlay');
+        if (lightboxOverlay && lightboxOverlay.classList.contains('active')) {
+            closeLightbox();
+        }
     }
 });
 
@@ -98,23 +62,18 @@ const quoteForm = document.getElementById('quoteForm');
 if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
         e.preventDefault();
-
+        
         const inquiryType = document.getElementById('inquiry-type').value;
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
         const message = document.getElementById('message').value;
-
-        let contextMessage = message;
-        if (lightboxState.selectedTitle) {
-            contextMessage = `Regarding: ${lightboxState.selectedTitle}\n\n${message}`;
-        }
-
+        
         const selectElement = document.getElementById('inquiry-type');
         const inquiryTypeText = selectElement.options[selectElement.selectedIndex]?.text || inquiryType;
-
+        
         alert(`Thank you for your inquiry, ${name}! We will contact you at ${email} or ${phone} regarding your ${inquiryTypeText} request.`);
-
+        
         quoteForm.reset();
     });
 }
@@ -123,16 +82,18 @@ if (quoteForm) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
+        
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-
+        
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
-            if (lightboxModal && lightboxModal.style.display === 'block') {
+            // Close lightbox if open
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
+            if (lightboxOverlay && lightboxOverlay.classList.contains('active')) {
                 closeLightbox();
             }
-
+            
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
@@ -141,14 +102,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Initialize: make sure lightbox is hidden on page load
+// Initialize: ensure lightbox is hidden on page load
 document.addEventListener('DOMContentLoaded', function() {
-    if (lightboxModal) {
-        lightboxModal.style.display = 'none';
+    const lightboxOverlay = document.getElementById('lightbox-overlay');
+    if (lightboxOverlay) {
+        lightboxOverlay.classList.remove('active');
     }
+    document.body.style.overflow = 'auto';
 });
 
-// Add touch support for mobile devices
+// Touch device support
 if ('ontouchstart' in window) {
     document.documentElement.classList.add('touch-device');
 }
