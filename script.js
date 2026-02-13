@@ -57,28 +57,30 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Contact form submission
-const quoteForm = document.getElementById('quoteForm');
-if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
+// ===== CONTACT FORM SUBMISSION =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const inquiryType = document.getElementById('inquiry-type').value;
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const message = document.getElementById('message').value;
+        const inquiryType = document.getElementById('contact-inquiry-type');
+        const name = document.getElementById('contact-name');
+        const email = document.getElementById('contact-email');
+        const phone = document.getElementById('contact-phone');
+        const message = document.getElementById('contact-message');
         
-        const selectElement = document.getElementById('inquiry-type');
-        const inquiryTypeText = selectElement.options[selectElement.selectedIndex]?.text || inquiryType;
-        
-        alert(`Thank you for your inquiry, ${name}! We will contact you at ${email} or ${phone} regarding your ${inquiryTypeText} request.`);
-        
-        quoteForm.reset();
+        if (inquiryType && name && email && phone && message) {
+            const selectElement = inquiryType;
+            const inquiryTypeText = selectElement.options[selectElement.selectedIndex]?.text || selectElement.value;
+            
+            alert(`Thank you for your inquiry, ${name.value}! We will contact you at ${email.value} or ${phone.value} regarding your ${inquiryTypeText} request.`);
+            
+            contactForm.reset();
+        }
     });
 }
 
-// Smooth scrolling for anchor links
+// ===== SMOOTH SCROLLING =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
