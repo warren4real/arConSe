@@ -6,7 +6,7 @@
     <title>ArConSe - We Build. We Design. We Sell.</title>
     
     <!-- CSS - Fixed path with cache busting -->
-    <link rel="stylesheet" href="style.css?v=1.0.0">
+    <link rel="stylesheet" href="style.css?v=3.0.0">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,8 +27,9 @@
                     <a href="#services">Services</a>
                     <a href="#products">Products</a>
                     <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <a href="#quote" class="btn-contact-oval">Contact</a>
+                <a href="#contact" class="btn-contact-oval">Contact</a>
             </div>
             
             <button class="menu-toggle">
@@ -46,7 +47,7 @@
             </div>
         </section>
 
-        <!-- ===== OUR SERVICES SECTION – UPDATED ===== -->
+        <!-- ===== OUR SERVICES SECTION ===== -->
         <section class="services-section" id="services">
             <div class="services-container">
                 <h2 class="services-title">OUR SERVICES</h2>
@@ -126,12 +127,14 @@
                 </div>
 
                 <div class="cta-wrapper">
-                    <a href="#quote" class="cta-button">Request a Quotation</a>
+                    <a href="#contact" class="cta-button">
+                        <i class="fas fa-file-alt"></i> Request a Quotation
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Products Section – UPDATED with Icons & Clickable Images -->
+        <!-- Products Section -->
         <section id="products" class="section products">
             <div class="container">
                 <div class="section-header">
@@ -153,7 +156,7 @@
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
-                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                        <a href="#contact" class="btn-product">Contact for Quote</a>
                     </div>
 
                     <!-- Water Dispenser -->
@@ -168,7 +171,7 @@
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
-                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                        <a href="#contact" class="btn-product">Contact for Quote</a>
                     </div>
 
                     <!-- Solar Products -->
@@ -183,7 +186,7 @@
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
-                        <a href="#quote" class="btn-product">Inquire Now</a>
+                        <a href="#contact" class="btn-product">Inquire Now</a>
                     </div>
 
                     <!-- Power Station -->
@@ -198,7 +201,7 @@
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
-                        <a href="#quote" class="btn-product">Inquire Now</a>
+                        <a href="#contact" class="btn-product">Inquire Now</a>
                     </div>
 
                     <!-- Smart Organic Composter -->
@@ -213,13 +216,13 @@
                                 <span class="overlay-text">Click me</span>
                             </div>
                         </div>
-                        <a href="#quote" class="btn-product">Contact for Quote</a>
+                        <a href="#contact" class="btn-product">Contact for Quote</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (Click Kept) -->
+        <!-- Projects Section -->
         <section id="projects" class="section projects">
             <div class="container">
                 <div class="section-header">
@@ -303,89 +306,118 @@
         </section>
     </div>
 
-    <!-- Orange Contact Section Wrapper -->
-    <div class="orange-contact-wrapper">
-        <section id="quote" class="section contact-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>CONTACT US</h2>
-                    <div class="underline"></div>
-                    <p class="section-subtitle">Get in touch for quotations, product inquiries, or project consultations</p>
-                </div>
-                
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Get In Touch</h3>
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>Office Address</h4>
-                                    <p>LG-C, Fullerton Suites, Orchard Drive,<br>Silang, Cavite, Philippines 4885</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <div>
-                                    <h4>Email Address</h4>
-                                    <p>arconse.ic@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <div>
-                                    <h4>Phone Numbers</h4>
-                                    <p>0916-693-8001</p>
-                                    <p>0917-204-3104</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-clock"></i>
-                                <div>
-                                    <h4>Business Hours</h4>
-                                    <p>Monday - Thursday: 8:00 AM - 5:00 PM</p>
-                                    <p>Friday: 8:00 AM - 3:00 PM</p>
-                                    <p>Saturday: Closed</p>
-                                    <p>Sunday: By Appointment</p>
-                                </div>
-                            </div>
+    <!-- ===== CONTACT US SECTION – UPDATED ===== -->
+    <section id="contact" class="contact-section-new">
+        <div class="contact-container-new">
+            <h2 class="contact-title">CONTACT US</h2>
+            <div class="contact-divider"></div>
+            <p class="contact-subtitle">Get in touch for quotations, product inquiries, or project consultations</p>
+
+            <!-- Contact Grid -->
+            <div class="contact-grid">
+                <!-- Left: Get In Touch -->
+                <div class="contact-info-panel">
+                    <h3 class="contact-info-title">Get In Touch</h3>
+
+                    <!-- Office Address -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Office Address</h4>
+                            <p>LG-C, Fullerton Suites, Orchard Drive,</p>
+                            <p>Silang, Cavite, Philippines 4885</p>
                         </div>
                     </div>
-                    
-                    <div class="contact-form">
-                        <h3>Send Us a Message</h3>
-                        <form id="quoteForm" class="quote-form">
-                            <div class="form-group">
-                                <label for="inquiry-type">Inquiry Type</label>
-                                <select id="inquiry-type" required>
-                                    <option value="">Select inquiry type</option>
-                                    <option value="service">Service Quotation</option>
-                                    <option value="product">Product Inquiry</option>
-                                    <option value="project">Project Consultation</option>
-                                    <option value="general">General Inquiry</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" placeholder="Email Address" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" placeholder="Phone Number" required>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" placeholder="Tell us about your project..." rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn-submit">Send Message</button>
-                        </form>
+
+                    <!-- Email -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <a href="mailto:arconse.ic@gmail.com">arconse.ic@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Numbers</h4>
+                            <p>0916-693-8001</p>
+                            <p>0917-204-3104</p>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Thursday: 8:00 AM - 5:00 PM</p>
+                            <p>Friday: 8:00 AM - 3:00 PM</p>
+                            <p>Saturday: Closed</p>
+                            <p>Sunday: By Appointment</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
 
-    <!-- White Background Footer -->
+                <!-- Right: Send Us a Message -->
+                <div class="contact-form-panel">
+                    <h3 class="contact-form-title">Send Us a Message</h3>
+
+                    <form id="contactForm" class="contact-form">
+                        <!-- Inquiry Type -->
+                        <div class="form-group">
+                            <label for="contact-inquiry-type">Inquiry Type</label>
+                            <select id="contact-inquiry-type" required>
+                                <option value="" disabled selected>Select inquiry type</option>
+                                <option value="service">Service Quotation</option>
+                                <option value="product">Product Inquiry</option>
+                                <option value="project">Project Consultation</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <!-- Name -->
+                        <div class="form-group">
+                            <input type="text" id="contact-name" placeholder="Your Name" required>
+                        </div>
+
+                        <!-- Email & Phone Row -->
+                        <div class="email-phone-row">
+                            <div class="form-group">
+                                <input type="email" id="contact-email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="contact-phone" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <textarea id="contact-message" placeholder="Tell us about your project..." rows="4" required></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="contact-submit-btn">
+                            Send Message
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <div class="white-background footer-only">
         <footer class="footer">
             <div class="container">
@@ -403,7 +435,7 @@
                             <li><a href="#services">Services</a></li>
                             <li><a href="#products">Products</a></li>
                             <li><a href="#projects">Projects</a></li>
-                            <li><a href="#quote">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </div>
                     
@@ -445,7 +477,7 @@
         </footer>
     </div>
 
-    <!-- ===== LIGHTBOX OVERLAY ===== -->
+    <!-- Lightbox Overlay -->
     <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
         <div class="lightbox-content" onclick="event.stopPropagation()">
             <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
@@ -455,6 +487,6 @@
         </div>
     </div>
 
-    <script src="script.js?v=1.0.0"></script>
+    <script src="script.js?v=3.0.0"></script>
 </body>
 </html>
