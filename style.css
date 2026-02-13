@@ -749,7 +749,6 @@ body {
     min-height: 120px;
     padding: 12px;
     resize: vertical;
-    font-family: 'Roboto', sans-serif;
 }
 
 .contact-form select:focus,
@@ -937,7 +936,6 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    .contact-container,
     .contact-grid {
         grid-template-columns: 1fr;
     }
