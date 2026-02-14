@@ -48,29 +48,6 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ===== CONTACT FORM SUBMISSION =====
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const inquiryType = document.getElementById('contact-inquiry-type');
-        const name = document.getElementById('contact-name');
-        const email = document.getElementById('contact-email');
-        const phone = document.getElementById('contact-phone');
-        const message = document.getElementById('contact-message');
-        
-        if (inquiryType && name && email && phone && message) {
-            const selectElement = inquiryType;
-            const inquiryTypeText = selectElement.options[selectElement.selectedIndex]?.text || selectElement.value;
-            
-            alert(`Thank you for your inquiry, ${name.value}! We will contact you at ${email.value} or ${phone.value} regarding your ${inquiryTypeText} request.`);
-            
-            contactForm.reset();
-        }
-    });
-}
-
 // ===== SMOOTH SCROLLING =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
