@@ -57,25 +57,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===== BACKGROUND WRAPPERS ===== */
-.orange-background {
-    background-color: #f48020;
-}
-
-.orange-background .section-header h2,
-.orange-background .section-subtitle {
-    color: white;
-}
-
-.orange-background .underline {
-    background: white;
-}
-
-.white-background {
-    background-color: white;
-}
-
-/* ===== HEADER / NAVIGATION BAR ===== */
+/* ===== HEADER / NAVIGATION BAR – NEW ===== */
 #site-header {
     position: sticky;
     top: 0;
@@ -109,7 +91,7 @@ body {
 .desktop-nav a {
     font-size: 1rem;
     font-weight: 500;
-    color: #f48020;
+    color: #f97316;
     text-decoration: none;
     transition: opacity 0.2s;
     position: relative;
@@ -122,7 +104,7 @@ body {
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: #f48020;
+    background-color: #f97316;
     transition: width 0.3s;
 }
 
@@ -136,7 +118,7 @@ body {
 
 .contact-btn {
     display: inline-block;
-    background: #f48020;
+    background: #f97316;
     color: #ffffff;
     font-size: 0.95rem;
     font-weight: 600;
@@ -144,13 +126,13 @@ body {
     border-radius: 9999px;
     text-decoration: none;
     transition: all 0.3s;
-    border: 2px solid #f48020;
+    border: 2px solid #f97316;
 }
 
 .contact-btn:hover {
     background: #ea6a0e;
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(244,128,32,0.3);
+    box-shadow: 0 4px 12px rgba(249,115,22,0.3);
 }
 
 .mobile-toggle {
@@ -159,7 +141,7 @@ body {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #f48020;
+    color: #f97316;
 }
 
 .mobile-menu {
@@ -174,7 +156,7 @@ body {
 .mobile-menu a {
     font-size: 1.125rem;
     font-weight: 500;
-    color: #f48020;
+    color: #f97316;
     text-decoration: none;
     padding: 0.5rem 0;
 }
@@ -182,7 +164,7 @@ body {
 .contact-btn.mobile {
     text-align: center;
     margin-top: 0.5rem;
-    background: #f48020;
+    background: #f97316;
     color: white;
     padding: 0.75rem;
 }
@@ -328,14 +310,14 @@ body {
     margin-top: 40px;
 }
 
-/* ===== REQUEST A QUOTATION BUTTON ===== */
+/* ===== REQUEST A QUOTATION BUTTON – NEW ===== */
 .quote-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     background: #fff5eb;
-    color: #f48020;
+    color: #f97316;
     font-size: 1.25rem;
     font-weight: 700;
     padding: 1rem 3rem;
@@ -602,10 +584,10 @@ body {
     margin-bottom: 0;
 }
 
-/* ===== CONTACT US SECTION – FIXED ===== */
+/* ===== CONTACT US SECTION ===== */
 .contact-section-new {
     padding: 60px 0;
-    background-color: #f48020; /* Matches overall page color */
+    background-color: #f97316;
 }
 
 .contact-container-new {
@@ -660,7 +642,7 @@ body {
 .contact-info-title {
     font-size: 24px;
     font-weight: 700;
-    color: #f48020; /* Matches overall page color */
+    color: #f97316;
     margin-bottom: 32px;
     font-family: 'Poppins', sans-serif;
 }
@@ -678,7 +660,7 @@ body {
 .contact-icon {
     flex-shrink: 0;
     margin-top: 4px;
-    color: #f48020; /* Matches overall page color */
+    color: #f97316;
     font-size: 1.25rem;
     width: 24px;
     display: flex;
@@ -703,7 +685,7 @@ body {
 }
 
 .contact-info-item a:hover {
-    color: #f48020; /* Matches overall page color */
+    color: #f97316;
     text-decoration: underline;
 }
 
@@ -715,7 +697,7 @@ body {
 .contact-form-title {
     font-size: 24px;
     font-weight: 700;
-    color: #f48020; /* Matches overall page color */
+    color: #f97316;
     margin-bottom: 32px;
     font-family: 'Poppins', sans-serif;
 }
@@ -744,7 +726,7 @@ body {
     width: 100%;
     height: 48px;
     padding: 0 12px;
-    border: 1px solid rgba(244,128,32,0.3);
+    border: 1px solid rgba(249,115,22,0.3);
     border-radius: 8px;
     background: #fff;
     font-size: 14px;
@@ -769,8 +751,8 @@ body {
 .contact-form select:focus,
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #f48020;
-    box-shadow: 0 0 0 3px rgba(244,128,32,0.1);
+    border-color: #f97316;
+    box-shadow: 0 0 0 3px rgba(249,115,22,0.1);
 }
 
 .email-phone-row {
@@ -782,7 +764,7 @@ body {
 .contact-submit-btn {
     width: 100%;
     height: 48px;
-    background: #f48020; /* Matches overall page color */
+    background: #f97316;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -798,9 +780,9 @@ body {
 }
 
 .contact-submit-btn:hover {
-    background: #d86c10; /* Darker orange for hover */
+    background: #e5670e;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(244,128,32,0.3);
+    box-shadow: 0 6px 15px rgba(249,115,22,0.3);
 }
 
 .contact-submit-btn i {
